@@ -1,0 +1,65 @@
+body{
+    /* 不改bootstrap的css這樣更新才不會找步道，另外設定css */
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans"
+    ,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" ,"Microsoft JHengHei" !important;
+    /* 放入背景圖並加濾鏡 */
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../image/Geography_21.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 外面DIV要設定尺寸，圖片也是設定100%高跟寬 */
+.carousel-item img{
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+/* 設定高 */
+.carousel-item{
+height: 300px;
+
+}
+
+/* 不要改BOOTSTRAP地所以到這設定 */
+.carousel-caption{
+    background: rgba(0,0,0,0.5);
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    border-radius: 5px;
+    /* 加上imprtant蓋過bootstrap css */
+
+}
+
+/* 響應式斷點 超過此版面就會走下面樣式 */
+@media(min-width:992px){
+    #content .row:nth-child(even) .col-lg-5{
+        order: 2;
+    }
+    #content .row:nth-child(even) .col-lg-7{
+        order: 1;
+        text-align: right;
+    }
+}
+
+/* 將不同圖片，固定成相同尺寸 */
+#content .row .col-lg-5{
+    height: 300px;
+}
+#content .row .col-lg-5 img{
+    object-fit: cover;
+    object-position: center;
+
+}
+#footer .row{
+    height: 50px;
+}
+
+.card-img-top{
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
